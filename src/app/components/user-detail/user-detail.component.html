@@ -1,1 +1,62 @@
-<p>user-detail works!</p>
+<div *ngIf="user" class="container mt-5">
+  <h2>User Details</h2>
+  <div class="mb-3">
+    <label><strong>Type:</strong></label>
+    <span>{{ user.type }}</span>
+  </div>
+  <div class="mb-3">
+    <label><strong>NIF:</strong></label>
+    <span>{{ user.nif }}</span>
+  </div>
+  <div class="mb-3">
+    <label><strong>Name:</strong></label>
+    <span>{{ user.name }}</span>
+  </div>
+  <div class="mb-3">
+    <label><strong>First Surname:</strong></label>
+    <span>{{ user.firstSurname }}</span>
+  </div>
+  <div class="mb-3">
+    <label><strong>Second Surname:</strong></label>
+    <span>{{ user.secondSurname }}</span>
+  </div>
+  <div class="mb-3">
+    <label><strong>Gender:</strong></label>
+    <span>{{ user.gender }}</span>
+  </div>
+  <div class="mb-3">
+    <label><strong>Birth Date:</strong></label>
+    <span>{{ user.birthDate | date }}</span>
+  </div>
+  <div class="mb-3">
+    <label><strong>Address:</strong></label>
+    <div>
+      <span
+        >{{ user.address.street }}, {{ user.address.number }}
+        {{ user.address.door }}</span
+      ><br />
+      <span>{{ user.address.postalCode }}, {{ user.address.city }}</span>
+    </div>
+  </div>
+  <div *ngIf="user.type === 'Demandant'" class="mb-3">
+    <label><strong>Studies:</strong></label>
+    <div *ngFor="let study of user.studies">
+      <span
+        >{{ study.institution }} - {{ study.degree }} ({{
+          study.date | date
+        }})</span
+      >
+    </div>
+  </div>
+  <div *ngIf="user.type === 'Employee'" class="mb-3">
+    <label><strong>Work Experience:</strong></label>
+    <div *ngFor="let exp of user.workExperience">
+      <span
+        >{{ exp.company }} - {{ exp.position }} ({{ exp.date | date }})</span
+      >
+    </div>
+  </div>
+</div>
+<div *ngIf="!user" class="container mt-5">
+  <h2>User not found</h2>
+</div>
