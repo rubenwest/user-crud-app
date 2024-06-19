@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "type": "Demandante",
+    "type": "Demandant",
     "nif": "12345678A",
     "name": "John",
     "firstSurname": "Doe",
@@ -25,7 +25,7 @@
   },
   {
     "id": 2,
-    "type": "Demandante",
+    "type": "Demandant",
     "nif": "87654321B",
     "name": "Jane",
     "firstSurname": "Roe",
@@ -49,7 +49,7 @@
   },
   {
     "id": 3,
-    "type": "Demandante",
+    "type": "Demandant",
     "nif": "23456789C",
     "name": "Liam",
     "firstSurname": "Smith",
@@ -73,7 +73,7 @@
   },
   {
     "id": 4,
-    "type": "Demandante",
+    "type": "Demandant",
     "nif": "34567890D",
     "name": "Olivia",
     "firstSurname": "Brown",
@@ -97,7 +97,7 @@
   },
   {
     "id": 5,
-    "type": "Demandante",
+    "type": "Demandant",
     "nif": "45678901E",
     "name": "Noah",
     "firstSurname": "Jones",
