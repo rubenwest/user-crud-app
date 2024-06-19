@@ -19,7 +19,7 @@ export class UserService {
 
   private loadUsers(): void {
     this.http
-      .get<(UserDemandant | UserEmployee)[]>('assets/users.json')
+      .get<(UserDemandant | UserEmployee)[]>(`assets/users.json`)
       .pipe(
         map((users) =>
           users.map((user) => {
