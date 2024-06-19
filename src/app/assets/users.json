@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "type": "Demandante",
+    "nif": "12345678A",
+    "name": "John",
+    "firstSurname": "Doe",
+    "secondSurname": "Smith",
+    "gender": "Male",
+    "birthDate": "1990-01-01",
+    "address": {
+      "street": "Fake Street",
+      "number": 123,
+      "door": "1A",
+      "postalCode": "10001",
+      "city": "New York"
+    },
+    "studies": [
+      {
+        "institution": "New York University",
+        "degree": "Computer Science",
+        "date": "2012-06-01"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "Demandante",
+    "nif": "87654321B",
+    "name": "Jane",
+    "firstSurname": "Roe",
+    "secondSurname": "Doe",
+    "gender": "Female",
+    "birthDate": "1987-03-12",
+    "address": {
+      "street": "Moon Street",
+      "number": 45,
+      "door": "2B",
+      "postalCode": "94105",
+      "city": "San Francisco"
+    },
+    "studies": [
+      {
+        "institution": "University of California, Berkeley",
+        "degree": "Law",
+        "date": "2010-07-15"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "Demandante",
+    "nif": "23456789C",
+    "name": "Liam",
+    "firstSurname": "Smith",
+    "secondSurname": "Johnson",
+    "gender": "Male",
+    "birthDate": "1992-05-24",
+    "address": {
+      "street": "Baker Street",
+      "number": 221,
+      "door": "B",
+      "postalCode": "NW1 6XE",
+      "city": "London"
+    },
+    "studies": [
+      {
+        "institution": "University of Oxford",
+        "degree": "Physics",
+        "date": "2014-06-01"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "Demandante",
+    "nif": "34567890D",
+    "name": "Olivia",
+    "firstSurname": "Brown",
+    "secondSurname": "Williams",
+    "gender": "Female",
+    "birthDate": "1989-11-02",
+    "address": {
+      "street": "Queen Street",
+      "number": 32,
+      "door": "4C",
+      "postalCode": "M5V 2T6",
+      "city": "Toronto"
+    },
+    "studies": [
+      {
+        "institution": "University of Toronto",
+        "degree": "Chemistry",
+        "date": "2011-05-20"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "type": "Demandante",
+    "nif": "45678901E",
+    "name": "Noah",
+    "firstSurname": "Jones",
+    "secondSurname": "Davis",
+    "gender": "Male",
+    "birthDate": "1995-07-13",
+    "address": {
+      "street": "King Street",
+      "number": 78,
+      "door": "5D",
+      "postalCode": "SW1A 1AA",
+      "city": "London"
+    },
+    "studies": [
+      {
+        "institution": "Imperial College London",
+        "degree": "Mechanical Engineering",
+        "date": "2017-08-01"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "type": "Employee",
+    "nif": "56789012F",
+    "name": "Emma",
+    "firstSurname": "Garcia",
+    "secondSurname": "Martinez",
+    "gender": "Female",
+    "birthDate": "1991-09-17",
+    "address": {
+      "street": "Maple Street",
+      "number": 56,
+      "door": "3A",
+      "postalCode": "75001",
+      "city": "Paris"
+    },
+    "workExperience": [
+      {
+        "company": "Tech Solutions",
+        "position": "Software Engineer",
+        "date": "2015-06-01"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "type": "Employee",
+    "nif": "67890123G",
+    "name": "Lucas",
+    "firstSurname": "Martinez",
+    "secondSurname": "Lopez",
+    "gender": "Male",
+    "birthDate": "1988-12-25",
+    "address": {
+      "street": "Pine Street",
+      "number": 90,
+      "door": "2B",
+      "postalCode": "20001",
+      "city": "Washington D.C."
+    },
+    "workExperience": [
+      {
+        "company": "Finance Corp",
+        "position": "Financial Analyst",
+        "date": "2013-05-20"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "type": "Employee",
+    "nif": "78901234H",
+    "name": "Sophia",
+    "firstSurname": "Martinez",
+    "secondSurname": "Hernandez",
+    "gender": "Female",
+    "birthDate": "1993-04-18",
+    "address": {
+      "street": "Elm Street",
+      "number": 123,
+      "door": "1C",
+      "postalCode": "94107",
+      "city": "San Francisco"
+    },
+    "workExperience": [
+      {
+        "company": "Health Services",
+        "position": "Nurse",
+        "date": "2016-06-01"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "Employee",
+    "nif": "89012345I",
+    "name": "Mia",
+    "firstSurname": "Rodriguez",
+    "secondSurname": "Gonzalez",
+    "gender": "Female",
+    "birthDate": "1985-02-14",
+    "address": {
+      "street": "Oak Street",
+      "number": 45,
+      "door": "5E",
+      "postalCode": "33101",
+      "city": "Miami"
+    },
+    "workExperience": [
+      {
+        "company": "Marketing Experts",
+        "position": "Marketing Manager",
+        "date": "2010-09-01"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "type": "Employee",
+    "nif": "90123456J",
+    "name": "James",
+    "firstSurname": "Taylor",
+    "secondSurname": "Wilson",
+    "gender": "Male",
+    "birthDate": "1982-08-30",
+    "address": {
+      "street": "Main Street",
+      "number": 12,
+      "door": "3B",
+      "postalCode": "30301",
+      "city": "Atlanta"
+    },
+    "workExperience": [
+      {
+        "company": "Retail Solutions",
+        "position": "Store Manager",
+        "date": "2012-04-01"
+      }
+    ]
+  }
+]
