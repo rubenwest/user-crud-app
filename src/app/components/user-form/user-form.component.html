@@ -1,1 +1,227 @@
-<p>user-form works!</p>
+<div class="container mt-5">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="type" class="form-label">User Type</label>
+      <select id="type" class="form-select" formControlName="type">
+        <option *ngFor="let type of userTypes" [value]="type">
+          {{ type }}
+        </option>
+      </select>
+      <div
+        *ngIf="userForm.get('type')?.invalid && userForm.get('type')?.touched"
+        class="text-danger"
+      >
+        User Type is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="nif" class="form-label">NIF or Passport</label>
+      <input id="nif" type="text" class="form-control" formControlName="nif" />
+      <div
+        *ngIf="userForm.get('nif')?.invalid && userForm.get('nif')?.touched"
+        class="text-danger"
+      >
+        NIF or Passport is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        id="name"
+        type="text"
+        class="form-control"
+        formControlName="name"
+      />
+      <div
+        *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched"
+        class="text-danger"
+      >
+        Name is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="firstSurname" class="form-label">First Surname</label>
+      <input
+        id="firstSurname"
+        type="text"
+        class="form-control"
+        formControlName="firstSurname"
+      />
+      <div
+        *ngIf="
+          userForm.get('firstSurname')?.invalid &&
+          userForm.get('firstSurname')?.touched
+        "
+        class="text-danger"
+      >
+        First Surname is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="secondSurname" class="form-label">Second Surname</label>
+      <input
+        id="secondSurname"
+        type="text"
+        class="form-control"
+        formControlName="secondSurname"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="gender" class="form-label">Gender</label>
+      <input
+        id="gender"
+        type="text"
+        class="form-control"
+        formControlName="gender"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="birthDate" class="form-label">Birth Date</label>
+      <input
+        id="birthDate"
+        type="date"
+        class="form-control"
+        formControlName="birthDate"
+      />
+    </div>
+    <div formGroupName="address" class="mb-3">
+      <h5>Address</h5>
+      <div class="mb-3">
+        <label for="street" class="form-label">Street</label>
+        <input
+          id="street"
+          type="text"
+          class="form-control"
+          formControlName="street"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="number" class="form-label">Number</label>
+        <input
+          id="number"
+          type="text"
+          class="form-control"
+          formControlName="number"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="door" class="form-label">Door</label>
+        <input
+          id="door"
+          type="text"
+          class="form-control"
+          formControlName="door"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="postalCode" class="form-label">Postal Code</label>
+        <input
+          id="postalCode"
+          type="text"
+          class="form-control"
+          formControlName="postalCode"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="city" class="form-label">City</label>
+        <input
+          id="city"
+          type="text"
+          class="form-control"
+          formControlName="city"
+        />
+      </div>
+    </div>
+    <div
+      *ngIf="userForm.get('type')?.value === 'Demandant'"
+      formArrayName="studies"
+      class="mb-3"
+    >
+      <h5>Studies</h5>
+      <div
+        *ngFor="let study of studies.controls; let i = index"
+        [formGroupName]="i"
+      >
+        <div class="mb-3">
+          <label for="institution-{{ i }}" class="form-label"
+            >Institution</label
+          >
+          <input
+            id="institution-{{ i }}"
+            type="text"
+            class="form-control"
+            formControlName="institution"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="degree-{{ i }}" class="form-label">Degree</label>
+          <input
+            id="degree-{{ i }}"
+            type="text"
+            class="form-control"
+            formControlName="degree"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="date-{{ i }}" class="form-label">Date</label>
+          <input
+            id="date-{{ i }}"
+            type="date"
+            class="form-control"
+            formControlName="date"
+          />
+        </div>
+      </div>
+      <button type="button" class="btn btn-secondary" (click)="addStudy()">
+        Add Study
+      </button>
+    </div>
+    <div
+      *ngIf="userForm.get('type')?.value === 'Employee'"
+      formArrayName="workExperience"
+      class="mb-3"
+    >
+      <h5>Work Experience</h5>
+      <div
+        *ngFor="let exp of workExperience.controls; let i = index"
+        [formGroupName]="i"
+      >
+        <div class="mb-3">
+          <label for="company-{{ i }}" class="form-label">Company</label>
+          <input
+            id="company-{{ i }}"
+            type="text"
+            class="form-control"
+            formControlName="company"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="position-{{ i }}" class="form-label">Position</label>
+          <input
+            id="position-{{ i }}"
+            type="text"
+            class="form-control"
+            formControlName="position"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="date-{{ i }}" class="form-label">Date</label>
+          <input
+            id="date-{{ i }}"
+            type="date"
+            class="form-control"
+            formControlName="date"
+          />
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="addWorkExperience()"
+      >
+        Add Work Experience
+      </button>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
